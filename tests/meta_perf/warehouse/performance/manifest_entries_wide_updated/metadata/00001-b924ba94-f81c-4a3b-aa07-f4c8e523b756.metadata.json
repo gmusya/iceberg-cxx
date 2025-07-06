@@ -1,0 +1,328 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "1a91ff3b-6dd9-4dce-83cd-3ea84330dac7",
+  "location" : "s3://warehouse/performance/manifest_entries_wide_updated",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1751831687290,
+  "last-column-id" : 51,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "id",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 2,
+      "name" : "id0",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 3,
+      "name" : "id1",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 4,
+      "name" : "id2",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 5,
+      "name" : "id3",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 6,
+      "name" : "id4",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 7,
+      "name" : "id5",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 8,
+      "name" : "id6",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 9,
+      "name" : "id7",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 10,
+      "name" : "id8",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 11,
+      "name" : "id9",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 12,
+      "name" : "id10",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 13,
+      "name" : "id11",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 14,
+      "name" : "id12",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 15,
+      "name" : "id13",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 16,
+      "name" : "id14",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 17,
+      "name" : "id15",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 18,
+      "name" : "id16",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 19,
+      "name" : "id17",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 20,
+      "name" : "id18",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 21,
+      "name" : "id19",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 22,
+      "name" : "id20",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 23,
+      "name" : "id21",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 24,
+      "name" : "id22",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 25,
+      "name" : "id23",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 26,
+      "name" : "id24",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 27,
+      "name" : "id25",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 28,
+      "name" : "id26",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 29,
+      "name" : "id27",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 30,
+      "name" : "id28",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 31,
+      "name" : "id29",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 32,
+      "name" : "id30",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 33,
+      "name" : "id31",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 34,
+      "name" : "id32",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 35,
+      "name" : "id33",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 36,
+      "name" : "id34",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 37,
+      "name" : "id35",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 38,
+      "name" : "id36",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 39,
+      "name" : "id37",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 40,
+      "name" : "id38",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 41,
+      "name" : "id39",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 42,
+      "name" : "id40",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 43,
+      "name" : "id41",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 44,
+      "name" : "id42",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 45,
+      "name" : "id43",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 46,
+      "name" : "id44",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 47,
+      "name" : "id45",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 48,
+      "name" : "id46",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 49,
+      "name" : "id47",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 50,
+      "name" : "id48",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 51,
+      "name" : "id49",
+      "required" : false,
+      "type" : "long"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "root",
+    "write.target-file-size-bytes" : "1024",
+    "commit.manifest-merge.enabled" : "false",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 1252695078447469352,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 1252695078447469352,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 1252695078447469352,
+    "timestamp-ms" : 1751831687290,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1751831627317",
+      "added-data-files" : "200",
+      "added-records" : "200000",
+      "added-files-size" : "3413103",
+      "changed-partition-count" : "1",
+      "total-records" : "200000",
+      "total-files-size" : "3413103",
+      "total-data-files" : "200",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.5",
+      "app-id" : "local-1751831627317",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.8.1 (commit 9ce0fcf0af7becf25ad9fc996c3bad2afdcfd33d)"
+    },
+    "manifest-list" : "s3://warehouse/performance/manifest_entries_wide_updated/metadata/snap-1252695078447469352-1-390caf35-9359-4d0d-9834-c96a5afc0178.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1751831687290,
+    "snapshot-id" : 1252695078447469352
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1751831654810,
+    "metadata-file" : "s3://warehouse/performance/manifest_entries_wide_updated/metadata/00000-d97c4347-9bb3-4b78-b1c7-82db18d406fc.metadata.json"
+  } ]
+}
