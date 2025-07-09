@@ -1,8 +1,12 @@
 #include "iceberg/manifest_entry.h"
 
 #include <Compiler.hh>
+#include <DataFile.hh>
+#include <Decoder.hh>
+#include <GenericDatum.hh>
 #include <NodeImpl.hh>
 #include <Schema.hh>
+#include <Stream.hh>
 #include <Types.hh>
 #include <ValidSchema.hh>
 #include <fstream>
@@ -11,6 +15,7 @@
 #include <variant>
 #include <vector>
 
+#include "avro/Generic.hh"
 #include "avro/Node.hh"
 #include "gtest/gtest.h"
 #include "iceberg/schema.h"
@@ -54,6 +59,83 @@ static void Check(const std::vector<ManifestEntry>& entries) {
   EXPECT_EQ(data_file.key_metadata.size(), 0);
   EXPECT_EQ(data_file.sort_order_id, 0);
   EXPECT_EQ(data_file.distinct_counts.size(), 0);
+}
+
+TEST(Something, X) {
+  const std::string input_schema = R"(
+{
+    "type": "record",
+    "name": "rec",
+    "fields": [
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ]
+})";
+
+  const std::string schema_to_read = R"(
+{
+    "type": "record",
+    "name": "rec",
+    "fields": [
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      },
+      {
+        "name": "c",
+        "type": "int",
+        "default": 12312
+      }
+    ]
+})";
+
+  avro::ValidSchema writer_schema = avro::compileJsonSchemaFromString(input_schema);
+  avro::ValidSchema reader_schema = avro::compileJsonSchemaFromString(schema_to_read);
+  
+  std::stringstream ss;
+  {
+    auto os = avro::ostreamOutputStream(ss);
+    avro::DataFileWriter<avro::GenericDatum> writer(std::move(os), writer_schema);
+
+    for (int i = 0; i < 5; ++i) {
+      avro::GenericDatum datum(writer_schema);
+      datum.value<avro::GenericRecord>().setFieldAt(0, avro::GenericDatum(1));
+      datum.value<avro::GenericRecord>().setFieldAt(1, avro::GenericDatum(2));
+
+      writer.write(datum);
+    }
+
+    writer.flush();
+    writer.close();
+  }
+
+  {
+    std::string content = ss.str();
+    auto is = avro::memoryInputStream(reinterpret_cast<const uint8_t*>(content.data()), content.size());
+
+    avro::DataFileReader<avro::GenericDatum> reader(std::move(is), reader_schema);
+    std::cerr << "A" << std::endl;
+    {
+      avro::GenericDatum datum(reader_schema);
+      std::cerr << "B" << std::endl;
+
+      reader.read(datum);
+      std::cerr << "C" << std::endl;
+
+      EXPECT_EQ(datum.value<avro::GenericRecord>().field("a").value<int32_t>(), 1);
+      EXPECT_EQ(datum.value<avro::GenericRecord>().field("b").value<int32_t>(), 2);
+    }
+  }
 }
 
 TEST(ManifestEntryTest, Test) {
