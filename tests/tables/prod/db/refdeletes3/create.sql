@@ -1,12 +1,11 @@
 -- Engine: Spark 3.5.1 fd86f85e181fc2dc0f50a096855acf83a6cc5d9c
-CREATE TABLE prod.db.refdeletes3 (a int, b int) USING iceberg TBLPROPERTIES(
+CREATE TABLE prod.db.refdeletes4 (a int, b int) USING iceberg TBLPROPERTIES(
     'write.delete.mode' = 'merge-on-read',
-    'write.delete.granularity' = 'file',
-    'write.target-file-size-bytes' = 200
+    'write.target-file-size-bytes' = 100000
 );
 
 INSERT INTO
-    prod.db.refdeletes3
+    prod.db.refdeletes4
 VALUES
     (0, 12),
     (1, 123),
@@ -15,7 +14,11 @@ VALUES
     (4, 1292),
     (5, 12831),
     (6, 12381),
-    (7, 123999),
+    (7, 123999);
+
+INSERT INTO
+    prod.db.refdeletes4
+VALUES
     (8, 12318231),
     (9, 999),
     (10, 1010),
@@ -26,6 +29,6 @@ VALUES
     (15, 182222);
 
 DELETE FROM
-    prod.db.refdeletes3
+    prod.db.refdeletes4
 WHERE
     a % 3 == 0;
